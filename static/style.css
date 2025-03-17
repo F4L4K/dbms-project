@@ -1,0 +1,99 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/static/crime.jpg");
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+    color: #333;
+    padding: 20px;
+}
+
+
+
+h1 {
+    font-size: 24px; 
+    margin: 0;
+    color: #104179; 
+    margin-bottom: 100px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    margin-top: 100px;
+    color: #9b1212;
+}
+
+h3 {
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* Form Styling */
+form {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #740606;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #740606;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color:#740606;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ecf0f1;
+}
+
+/* Error Message Styling */
+.error-message {
+    background-color: #740606;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+}
