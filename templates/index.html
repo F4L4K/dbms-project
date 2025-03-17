@@ -3,9 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   
+    <title>Crime Record Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     
+    
+
+    
+    <form method="POST" action="/">
+        <label for="query"><h2>Enter SQL Query:</h2></label><br>
+        <textarea name="query" id="query" rows="4" placeholder="e.g., SELECT * FROM crimes;"></textarea><br><br>
+        <input type="submit" value="Execute Query">
+    </form>
+
+    
+    {% if error %}
+        <div class="error-message">
+            <h3>Error: {{ error }}</h3>
+        </div>
+    {% endif %}
+
+    
+    {% if results %}
+        <h2>Query Results:</h2>
+        <table>
+            <thead>
+                <tr>
+                    {% for column in results[0].keys() %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in results %}
+                    <tr>
+                        {% for value in row.values() %}
+                            <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
 </body>
 </html>
+
