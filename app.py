@@ -2,14 +2,15 @@ from flask import Flask, render_template, request
 import mysql.connector
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', template_folder='templates')
+
 
 
 db_config = {
-    'host': 'localhost',  
-    'user': 'falak',      
-    'password': 'system',     
-    'database': 'mydb' 
+    'host': 'pydemo1.mysql.pythonanywhere-services.com',
+    'user': 'pydemo1',
+    'password': 'demoroot',
+    'database': 'pydemo1$default'
 }
 
 @app.route('/', methods=['GET', 'POST'])
